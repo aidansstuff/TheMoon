@@ -1,0 +1,7 @@
+{
+  "name": "Unity.RenderPipelines.Core.Runtime",
+  "references": [
+    "Unity.InputSystem"
+  ],
+  "allowUnsafeCode": true
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Unity.Networking.Transport",
+  "references": [
+    "Unity.Collections",
+    "Unity.Burst",
+    "Unity.Mathematics",
+    "Unity.Services.Relay"
+  ],
+  "allowUnsafeCode": true
+}

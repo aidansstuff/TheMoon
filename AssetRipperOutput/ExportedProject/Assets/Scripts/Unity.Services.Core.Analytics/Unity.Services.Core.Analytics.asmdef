@@ -1,0 +1,7 @@
+{
+  "name": "Unity.Services.Core.Analytics",
+  "references": [
+    "Unity.Services.Core"
+  ],
+  "allowUnsafeCode": true
+}

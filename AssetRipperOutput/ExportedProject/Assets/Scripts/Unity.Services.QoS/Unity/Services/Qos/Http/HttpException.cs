@@ -1,0 +1,68 @@
+using System;
+using UnityEngine.Scripting;
+
+namespace Unity.Services.Qos.Http
+{
+	[Serializable]
+	[Preserve]
+	internal class HttpException : Exception
+	{
+		[Preserve]
+		public HttpClientResponse Response;
+
+		[Preserve]
+		public HttpException()
+		{
+		}
+
+		[Preserve]
+		public HttpException(string message)
+			: base(message)
+		{
+		}
+
+		[Preserve]
+		public HttpException(string message, Exception inner)
+			: base(message, inner)
+		{
+		}
+
+		[Preserve]
+		public HttpException(HttpClientResponse response)
+			: base($"({response.StatusCode}) {response.ErrorMessage}")
+		{
+			Response = response;
+		}
+	}
+	[Serializable]
+	[Preserve]
+	internal class HttpException<T> : HttpException
+	{
+		[Preserve]
+		public T ActualError;
+
+		[Preserve]
+		public HttpException()
+		{
+		}
+
+		[Preserve]
+		public HttpException(string message)
+			: base(message)
+		{
+		}
+
+		[Preserve]
+		public HttpException(string message, Exception inner)
+			: base(message, inner)
+		{
+		}
+
+		[Preserve]
+		public HttpException(HttpClientResponse response, T actualError)
+			: base(response)
+		{
+			ActualError = actualError;
+		}
+	}
+}

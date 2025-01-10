@@ -1,0 +1,9 @@
+{
+  "name": "Unity.Multiplayer.Tools.NetStatsReporting",
+  "references": [
+    "Unity.Multiplayer.Tools.NetStats",
+    "Unity.Multiplayer.Tools.MetricTypes",
+    "Unity.Multiplayer.Tools.NetworkProfiler.Runtime"
+  ],
+  "allowUnsafeCode": true
+}

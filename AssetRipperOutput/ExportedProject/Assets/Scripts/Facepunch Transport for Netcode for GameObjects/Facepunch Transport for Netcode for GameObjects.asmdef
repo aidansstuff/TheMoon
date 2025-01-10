@@ -1,0 +1,9 @@
+{
+  "name": "Facepunch Transport for Netcode for GameObjects",
+  "references": [
+    "Unity.Netcode.Runtime",
+    "Facepunch.Steamworks.Win64",
+    "Unity.Collections"
+  ],
+  "allowUnsafeCode": true
+}

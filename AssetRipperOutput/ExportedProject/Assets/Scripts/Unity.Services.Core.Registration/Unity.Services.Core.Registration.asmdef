@@ -1,0 +1,15 @@
+{
+  "name": "Unity.Services.Core.Registration",
+  "references": [
+    "Unity.Services.Core.Internal",
+    "Unity.Services.Core.Scheduler",
+    "Unity.Services.Core.Device",
+    "Unity.Services.Core.Configuration",
+    "Unity.Services.Core.Environments.Internal",
+    "Unity.Services.Core.Threading",
+    "Unity.Services.Core",
+    "Newtonsoft.Json",
+    "Unity.Services.Core.Telemetry"
+  ],
+  "allowUnsafeCode": true
+}

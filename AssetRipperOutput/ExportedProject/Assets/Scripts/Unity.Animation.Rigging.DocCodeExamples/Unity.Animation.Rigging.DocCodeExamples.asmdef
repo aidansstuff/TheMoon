@@ -1,0 +1,7 @@
+{
+  "name": "Unity.Animation.Rigging.DocCodeExamples",
+  "references": [
+    "Unity.Animation.Rigging"
+  ],
+  "allowUnsafeCode": true
+}

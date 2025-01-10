@@ -1,0 +1,9 @@
+{
+  "name": "Unity.Netcode.Components",
+  "references": [
+    "Unity.Netcode.Runtime",
+    "Unity.Mathematics",
+    "Unity.Collections"
+  ],
+  "allowUnsafeCode": true
+}

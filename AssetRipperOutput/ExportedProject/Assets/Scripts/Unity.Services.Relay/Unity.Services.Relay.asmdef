@@ -1,0 +1,9 @@
+{
+  "name": "Unity.Services.Relay",
+  "references": [
+    "Unity.Services.Core.Internal",
+    "Unity.Services.Core",
+    "Newtonsoft.Json"
+  ],
+  "allowUnsafeCode": true
+}

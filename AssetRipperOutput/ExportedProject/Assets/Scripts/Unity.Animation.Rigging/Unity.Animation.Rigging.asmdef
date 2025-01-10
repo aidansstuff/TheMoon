@@ -1,0 +1,7 @@
+{
+  "name": "Unity.Animation.Rigging",
+  "references": [
+    "Unity.Burst"
+  ],
+  "allowUnsafeCode": true
+}

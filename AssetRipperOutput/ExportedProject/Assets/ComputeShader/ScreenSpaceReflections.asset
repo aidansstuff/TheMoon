@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!72 &7200000
+ComputeShader:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ScreenSpaceReflections
+  variants:
+  - serializedVersion: 2
+    targetRenderer: 2
+    targetLevel: 0
+    kernels:
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsTracing
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsReprojection
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateNoWorldSpeedRejectionBoth
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateNoWorldSpeedRejectionSourceOnly
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateNoWorldSpeedRejectionTargetOnly
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateHardThresholdSpeedRejectionBoth
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateHardThresholdSpeedRejectionSourceOnly
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateHardThresholdSpeedRejectionTargetOnly
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateSmoothSpeedRejectionBoth
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateSmoothSpeedRejectionSourceOnly
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateSmoothSpeedRejectionTargetOnly
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateNoWorldSpeedRejectionBothDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateNoWorldSpeedRejectionSourceOnlyDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateNoWorldSpeedRejectionTargetOnlyDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateHardThresholdSpeedRejectionBothDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateHardThresholdSpeedRejectionSourceOnlyDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateHardThresholdSpeedRejectionTargetOnlyDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateSmoothSpeedRejectionBothDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateSmoothSpeedRejectionSourceOnlyDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    - serializedVersion: 3
+      name: ScreenSpaceReflectionsAccumulateSmoothSpeedRejectionTargetOnlyDebug
+      uniqueVariants: []
+      variantIndices: []
+      globalKeywords:
+      - DEPTH_SOURCE_NOT_FROM_MIP_CHAIN
+      - SSR_APPROX
+      localKeywords: []
+      dynamicKeywords: []
+    constantBuffers: []
+    resourcesResolved: 0
+    compilerPlatform: 0
+    needsReflectionData: 0
+  m_CompilationContext:
+    serializedVersion: 2
+    buildTarget:
+      platform: 0
+      subTarget: 0
+      extendedPlatform: 0
+      isEditor: 0
+    platformGroup: 0
+    sourceFileName:
+    source:
+    sourceFile:
+    kernels: []
+    kernelMacros: []
+    compilationFlags: 0
+    supportedAPIs: 0
+    useDxcAPIs: 0
+    neverUseDxcAPIs: 0
+    includeHash0: 0
+    includeHash1: 0
+    includeHash2: 0
+    includeHash3: 0
+  errors: []

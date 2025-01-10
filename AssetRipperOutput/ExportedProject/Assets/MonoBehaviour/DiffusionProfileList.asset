@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b100ab0ea5fd4dd52b1a08834e5819f, type: 3}
+  m_Name: DiffusionProfileList
+  m_EditorClassIdentifier:
+  active: 1
+  diffusionProfiles:
+    m_OverrideState: 1
+    m_Value:
+    - {fileID: 11400000, guid: 8593057b850e8d74392147d3b5f11cfe, type: 2}
+    - {fileID: 11400000, guid: 770c51ac453eea94196daec444e18566, type: 2}

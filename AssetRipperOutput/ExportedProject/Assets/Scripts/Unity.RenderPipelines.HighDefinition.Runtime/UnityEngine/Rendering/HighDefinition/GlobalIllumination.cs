@@ -1,0 +1,346 @@
+using System;
+using UnityEngine.Serialization;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+	[Serializable]
+	[VolumeComponentMenuForRenderPipeline("Lighting/Screen Space Global Illumination", new Type[] { typeof(HDRenderPipeline) })]
+	public sealed class GlobalIllumination : VolumeComponentWithQuality
+	{
+		[Tooltip("Enable screen space global illumination.")]
+		public BoolParameter enable = new BoolParameter(value: false, BoolParameter.DisplayType.EnumPopup);
+
+		[Tooltip("Controls the casting technique used to evaluate the effect. Ray marching uses a ray-marched screen-space solution, Ray tracing uses a hardware accelerated world-space solution. Mixed uses first Ray marching, then Ray tracing if it fails to intersect on-screen geometry.")]
+		public RayCastingModeParameter tracing = new RayCastingModeParameter(RayCastingMode.RayMarching);
+
+		[Tooltip("Controls the fallback hierarchy for indirect diffuse in case the ray misses.")]
+		[FormerlySerializedAs("fallbackHierarchy")]
+		[AdditionalProperty]
+		public RayMarchingFallbackHierarchyParameter rayMiss = new RayMarchingFallbackHierarchyParameter(RayMarchingFallbackHierarchy.ReflectionProbesAndSky);
+
+		[Tooltip("Controls the thickness of the depth buffer used for ray marching.")]
+		public ClampedFloatParameter depthBufferThickness = new ClampedFloatParameter(0.1f, 0f, 0.5f);
+
+		public BoolParameter fullResolutionSS = new BoolParameter(value: true);
+
+		[SerializeField]
+		[Tooltip("Controls the number of steps used for ray marching.")]
+		private MinIntParameter m_MaxRaySteps = new MinIntParameter(32, 0);
+
+		[SerializeField]
+		[FormerlySerializedAs("denoise")]
+		private BoolParameter m_DenoiseSS = new BoolParameter(value: true);
+
+		[SerializeField]
+		[Tooltip("Use a half resolution denoiser.")]
+		private BoolParameter m_HalfResolutionDenoiserSS = new BoolParameter(value: false);
+
+		[SerializeField]
+		[Tooltip("Controls the radius of the GI denoiser (First Pass).")]
+		private ClampedFloatParameter m_DenoiserRadiusSS = new ClampedFloatParameter(0.6f, 0.001f, 1f);
+
+		[SerializeField]
+		[Tooltip("Enable second denoising pass.")]
+		private BoolParameter m_SecondDenoiserPassSS = new BoolParameter(value: true);
+
+		[Tooltip("Controls the fallback hierarchy for lighting the last bounce.")]
+		[AdditionalProperty]
+		public RayMarchingFallbackHierarchyParameter lastBounceFallbackHierarchy = new RayMarchingFallbackHierarchyParameter(RayMarchingFallbackHierarchy.ReflectionProbesAndSky);
+
+		[Tooltip("Controls the dimmer applied to the ambient and legacy light probes.")]
+		[AdditionalProperty]
+		public ClampedFloatParameter ambientProbeDimmer = new ClampedFloatParameter(0f, 0f, 1f);
+
+		[Tooltip("Defines the layers that GI should include.")]
+		public LayerMaskParameter layerMask = new LayerMaskParameter(-1);
+
+		[Tooltip("The LOD Bias HDRP applies to textures in the global illumination. A higher value increases performance and makes denoising easier, but it might reduce visual fidelity.")]
+		public ClampedIntParameter textureLodBias = new ClampedIntParameter(7, 0, 7);
+
+		[SerializeField]
+		[FormerlySerializedAs("rayLength")]
+		private MinFloatParameter m_RayLength = new MinFloatParameter(50f, 0.01f);
+
+		[SerializeField]
+		[FormerlySerializedAs("clampValue")]
+		[Tooltip("Controls the clamp of intensity.")]
+		private ClampedFloatParameter m_ClampValue = new ClampedFloatParameter(1f, 0.001f, 10f);
+
+		[Tooltip("Controls which version of the effect should be used.")]
+		public RayTracingModeParameter mode = new RayTracingModeParameter(RayTracingMode.Quality);
+
+		[SerializeField]
+		[FormerlySerializedAs("fullResolution")]
+		[Tooltip("Full Resolution")]
+		private BoolParameter m_FullResolution = new BoolParameter(value: false);
+
+		[Tooltip("Number of samples for GI.")]
+		public ClampedIntParameter sampleCount = new ClampedIntParameter(2, 1, 32);
+
+		[Tooltip("Number of bounces for GI.")]
+		public ClampedIntParameter bounceCount = new ClampedIntParameter(1, 1, 8);
+
+		[SerializeField]
+		[FormerlySerializedAs("denoise")]
+		[Tooltip("Denoise the ray-traced GI.")]
+		private BoolParameter m_Denoise = new BoolParameter(value: true);
+
+		[SerializeField]
+		[FormerlySerializedAs("halfResolutionDenoiser")]
+		[Tooltip("Use a half resolution denoiser.")]
+		private BoolParameter m_HalfResolutionDenoiser = new BoolParameter(value: false);
+
+		[SerializeField]
+		[FormerlySerializedAs("denoiserRadius")]
+		[Tooltip("Controls the radius of the GI denoiser (First Pass).")]
+		private ClampedFloatParameter m_DenoiserRadius = new ClampedFloatParameter(0.6f, 0.001f, 1f);
+
+		[SerializeField]
+		[FormerlySerializedAs("secondDenoiserPass")]
+		[Tooltip("Enable second denoising pass.")]
+		private BoolParameter m_SecondDenoiserPass = new BoolParameter(value: true);
+
+		[SerializeField]
+		[Tooltip("Controls the number of steps HDRP uses for mixed tracing.")]
+		private MinIntParameter m_MaxMixedRaySteps = new MinIntParameter(48, 0);
+
+		[AdditionalProperty]
+		[Tooltip("When enabled, global illumination generated by moving objects will not be accumulated, generating less ghosting but introducing additional noise.")]
+		public BoolParameter receiverMotionRejection = new BoolParameter(value: true);
+
+		public int maxRaySteps
+		{
+			get
+			{
+				if (!UsesQualitySettings())
+				{
+					return m_MaxRaySteps.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().SSGIRaySteps[quality.value];
+			}
+			set
+			{
+				m_MaxRaySteps.value = value;
+			}
+		}
+
+		public bool denoiseSS
+		{
+			get
+			{
+				if (!UsesQualitySettings())
+				{
+					return m_DenoiseSS.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().SSGIDenoise[quality.value];
+			}
+			set
+			{
+				m_DenoiseSS.value = value;
+			}
+		}
+
+		public bool halfResolutionDenoiserSS
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_HalfResolutionDenoiserSS.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().SSGIHalfResDenoise[quality.value];
+			}
+			set
+			{
+				m_HalfResolutionDenoiserSS.value = value;
+			}
+		}
+
+		public float denoiserRadiusSS
+		{
+			get
+			{
+				if (!UsesQualitySettings())
+				{
+					return m_DenoiserRadiusSS.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().SSGIDenoiserRadius[quality.value];
+			}
+			set
+			{
+				m_DenoiserRadiusSS.value = value;
+			}
+		}
+
+		public bool secondDenoiserPassSS
+		{
+			get
+			{
+				if (!UsesQualitySettings())
+				{
+					return m_SecondDenoiserPassSS.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().SSGISecondDenoise[quality.value];
+			}
+			set
+			{
+				m_SecondDenoiserPassSS.value = value;
+			}
+		}
+
+		public float rayLength
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_RayLength.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIRayLength[quality.value];
+			}
+			set
+			{
+				m_RayLength.value = value;
+			}
+		}
+
+		public float clampValue
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_ClampValue.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIClampValue[quality.value];
+			}
+			set
+			{
+				m_ClampValue.value = value;
+			}
+		}
+
+		public bool fullResolution
+		{
+			get
+			{
+				if (!UsesQualitySettings())
+				{
+					return m_FullResolution.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIFullResolution[quality.value];
+			}
+			set
+			{
+				m_FullResolution.value = value;
+			}
+		}
+
+		public bool denoise
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_Denoise.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIDenoise[quality.value];
+			}
+			set
+			{
+				m_Denoise.value = value;
+			}
+		}
+
+		public bool halfResolutionDenoiser
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_HalfResolutionDenoiser.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIHalfResDenoise[quality.value];
+			}
+			set
+			{
+				m_HalfResolutionDenoiser.value = value;
+			}
+		}
+
+		public float denoiserRadius
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_DenoiserRadius.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIDenoiserRadius[quality.value];
+			}
+			set
+			{
+				m_DenoiserRadius.value = value;
+			}
+		}
+
+		public bool secondDenoiserPass
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_SecondDenoiserPass.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGISecondDenoise[quality.value];
+			}
+			set
+			{
+				m_SecondDenoiserPass.value = value;
+			}
+		}
+
+		public int maxMixedRaySteps
+		{
+			get
+			{
+				if (!UsesQualitySettings() || UsesQualityMode())
+				{
+					return m_MaxMixedRaySteps.value;
+				}
+				return VolumeComponentWithQuality.GetLightingQualitySettings().RTGIRaySteps[quality.value];
+			}
+			set
+			{
+				m_MaxMixedRaySteps.value = value;
+			}
+		}
+
+		private bool UsesQualityMode()
+		{
+			if (tracing.overrideState && tracing == RayCastingMode.RayTracing)
+			{
+				if (mode.overrideState)
+				{
+					if (mode.overrideState)
+					{
+						return mode == RayTracingMode.Quality;
+					}
+					return false;
+				}
+				return true;
+			}
+			return false;
+		}
+
+		private GlobalIllumination()
+		{
+			base.displayName = "Screen Space Global Illumination";
+		}
+
+		internal static bool RayTracingActive(GlobalIllumination volume)
+		{
+			return volume.tracing.value != RayCastingMode.RayMarching;
+		}
+	}
+}

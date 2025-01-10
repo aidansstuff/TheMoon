@@ -1,0 +1,5 @@
+{
+  "name": "Unity.Collections.LowLevel.ILSupport",
+  "references": [],
+  "allowUnsafeCode": true
+}

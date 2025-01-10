@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "com.unity.collab-proxy": "2.3.1",
+    "com.nomnom.unity-lc-project-patcher": "https://github.com/nomnomab/unity-lc-project-patcher.git",
+    "com.nomnom.unity-project-patcher": "https://github.com/nomnomab/unity-project-patcher.git",
+    "com.unity.collab-proxy": "2.6.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.render-pipelines.high-definition": "14.0.10",
     "com.unity.textmeshpro": "3.0.6",

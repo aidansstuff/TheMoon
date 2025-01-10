@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30496d6ae6d6f907456e10a94e01ec6, type: 3}
+  m_Name: EasterEgg
+  m_EditorClassIdentifier:
+  itemId: 0
+  itemName: Easter egg
+  spawnPositionTypes: []
+  twoHanded: 0
+  twoHandedAnimation: 0
+  disableHandsOnWall: 0
+  canBeGrabbedBeforeGameStart: 0
+  weight: 1.03
+  itemIsTrigger: 0
+  holdButtonUse: 0
+  itemSpawnsOnGround: 1
+  isConductiveMetal: 0
+  isScrap: 1
+  creditsWorth: 0
+  lockedInDemo: 0
+  highestSalePercentage: 80
+  maxValue: 130
+  minValue: 55
+  spawnPrefab: {fileID: 1292867269058296, guid: 9e047fe80a9d97c46ac0c4bd6cbebea0, type: 2}
+  requiresBattery: 0
+  batteryUsage: 5
+  automaticallySetUsingPower: 1
+  itemIcon: {fileID: 21300000, guid: 39a8c7d8c8eaf5c46aab972aab7dea08, type: 2}
+  grabAnim:
+  useAnim:
+  pocketAnim:
+  throwAnim:
+  grabAnimationTime: 0
+  grabSFX: {fileID: 8300000, guid: 24817d54a67e8d8449e40c8cdeee822e, type: 3}
+  dropSFX: {fileID: 8300000, guid: cf1b27b09e1a9f34ea01c3d083684cc4, type: 3}
+  pocketSFX: {fileID: 0}
+  throwSFX: {fileID: 0}
+  syncGrabFunction: 0
+  syncUseFunction: 0
+  syncDiscardFunction: 0
+  syncInteractLRFunction: 0
+  saveItemVariable: 0
+  isDefensiveWeapon: 0
+  toolTips: []
+  verticalOffset: 0.12
+  floorYOffset: 0
+  allowDroppingAheadOfPlayer: 1
+  restingRotation: {x: 0, y: 0, z: 90}
+  rotationOffset: {x: 0, y: 106.72, z: 42.87}
+  positionOffset: {x: -0.02, y: 0.15, z: -0.02}
+  meshOffset: 0
+  meshVariants:
+  - {fileID: 4300000, guid: c545113cb92faa646981c50ddf74e4a5, type: 2}
+  - {fileID: 4300000, guid: 7422d65b6dbdc2d4589e967f3b883779, type: 2}
+  - {fileID: 4300000, guid: a9f480b87292fad48ad7579ca3e8bf8a, type: 2}
+  - {fileID: 4300000, guid: 9c213b7b06c30444583b8dc6de8a2556, type: 2}
+  - {fileID: 4300000, guid: b7b1a6acccdc0254182c48cd92b6f1a9, type: 2}
+  materialVariants: []
+  usableInSpecialAnimations: 0
+  canBeInspected: 0

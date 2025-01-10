@@ -1,0 +1,12 @@
+{
+  "name": "Unity.RenderPipelines.HighDefinition.Runtime",
+  "references": [
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.Mathematics",
+    "Unity.Burst",
+    "Unity.VisualEffectGraph.Runtime",
+    "Unity.RenderPipelines.HighDefinition.Config.Runtime",
+    "Unity.Collections"
+  ],
+  "allowUnsafeCode": true
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Unity.Netcode.Runtime",
+  "references": [
+    "Unity.Collections",
+    "Unity.Multiplayer.Tools.NetStats",
+    "Unity.Multiplayer.Tools.MetricTypes",
+    "Unity.Multiplayer.Tools.NetworkSolutionInterface",
+    "Unity.Networking.Transport",
+    "Unity.Burst",
+    "Unity.Multiplayer.Tools.NetStatsReporting"
+  ],
+  "allowUnsafeCode": true
+}
