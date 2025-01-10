@@ -70,4 +70,13 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-AssetRipper/AssetRipper.SourceGenerated.dll
+
+.vscode/
+.idea/
+
+# Patcher specific
+/[Aa]ssets/LethalCompany/Game/*
+*.dll*
+/AssetRipper/*
+/AssetRipperOutput/*
+/AssetRipperOutput/ExportedProject/Assets
