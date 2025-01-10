@@ -1,8 +1,0 @@
-{
-  "name": "Unity.VisualEffectGraph.Runtime",
-  "references": [
-    "Unity.Timeline",
-    "Unity.InputSystem"
-  ],
-  "allowUnsafeCode": true
-}

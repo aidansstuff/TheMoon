@@ -1,7 +1,0 @@
-{
-  "name": "Unity.RenderPipelines.HighDefinition.Config.Runtime",
-  "references": [
-    "Unity.RenderPipelines.Core.Runtime"
-  ],
-  "allowUnsafeCode": true
-}

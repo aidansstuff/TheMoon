@@ -1,7 +1,0 @@
-{
-  "name": "Unity.Burst",
-  "references": [
-    "Unity.Burst.Unsafe"
-  ],
-  "allowUnsafeCode": true
-}

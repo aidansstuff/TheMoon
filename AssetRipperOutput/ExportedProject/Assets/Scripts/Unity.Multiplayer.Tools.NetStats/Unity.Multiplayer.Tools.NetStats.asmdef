@@ -1,8 +1,0 @@
-{
-  "name": "Unity.Multiplayer.Tools.NetStats",
-  "references": [
-    "Unity.Collections",
-    "Unity.Multiplayer.Tools.Common"
-  ],
-  "allowUnsafeCode": true
-}

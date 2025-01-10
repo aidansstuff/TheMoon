@@ -1,9 +1,0 @@
-{
-  "name": "Unity.ProBuilder",
-  "references": [
-    "Unity.RenderPipelines.HighDefinition.Runtime",
-    "Unity.ProBuilder.Poly2Tri",
-    "Unity.ProBuilder.KdTree"
-  ],
-  "allowUnsafeCode": true
-}

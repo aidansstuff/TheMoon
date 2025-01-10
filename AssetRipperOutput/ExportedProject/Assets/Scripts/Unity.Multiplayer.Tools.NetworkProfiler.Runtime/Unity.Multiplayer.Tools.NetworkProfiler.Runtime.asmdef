@@ -1,9 +1,0 @@
-{
-  "name": "Unity.Multiplayer.Tools.NetworkProfiler.Runtime",
-  "references": [
-    "Unity.Profiling.Core",
-    "Unity.Multiplayer.Tools.MetricTypes",
-    "Unity.Multiplayer.Tools.NetStats"
-  ],
-  "allowUnsafeCode": true
-}
