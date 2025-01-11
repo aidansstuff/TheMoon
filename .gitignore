@@ -79,5 +79,3 @@ crashlytics-build.properties
 *.dll*
 /AssetRipper/*
 /AssetRipperOutput/*
-/AssetRipperOutput/ExportedProject/Assets
-/AssetRipperOutput/ExportedProject

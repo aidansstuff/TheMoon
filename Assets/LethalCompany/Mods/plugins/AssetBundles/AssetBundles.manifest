@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2215950662
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: themoonextendedmod.lethalbundle
+      Dependencies: {}
+    Info_1:
+      Name: themoonscene.lethalbundle
+      Dependencies: {}

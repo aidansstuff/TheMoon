@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -194780425, guid: e6d87b09fec0f3f4c8554498964db477, type: 3}
+  m_Name: ExtendedMod
+  m_EditorClassIdentifier: 
+  <ModName>k__BackingField: The Moon Mod
+  <AuthorName>k__BackingField: Catffinated
+  <ModMergeSetting>k__BackingField: 0
+  <ExtendedLevels>k__BackingField:
+  - {fileID: 11400000, guid: 72f70649ec30c2440a4b500438960c52, type: 2}
+  <ExtendedDungeonFlows>k__BackingField: []
+  <ExtendedItems>k__BackingField: []
+  <ExtendedEnemyTypes>k__BackingField: []
+  <ExtendedWeatherEffects>k__BackingField: []
+  <ExtendedFootstepSurfaces>k__BackingField: []
+  <ExtendedStoryLogs>k__BackingField: []
+  <ExtendedBuyableVehicles>k__BackingField: []
