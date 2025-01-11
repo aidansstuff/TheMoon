@@ -18,7 +18,7 @@ MonoBehaviour:
   levelID: 0
   lockedForDemo: 0
   spawnEnemiesAndScrap: 1
-  PlanetName: Moon
+  PlanetName: 0 Moon
   LevelDescription: 'POPULATION: Abandoned
 
     CONDITIONS: Rough, rocky terrain.
@@ -45,10 +45,12 @@ MonoBehaviour:
   dungeonFlowTypes:
   - id: 0
     rarity: 300
-    overrideLevelAmbience: {fileID: 0}
+    overrideLevelAmbience: {fileID: 11400000, guid: 81b0be3a6b6643345b97217983e29c49,
+      type: 2}
   - id: 1
     rarity: 3
-    overrideLevelAmbience: {fileID: 0}
+    overrideLevelAmbience: {fileID: 11400000, guid: a29bc365f67b04e44b7a26d1d3920fa5,
+      type: 2}
   - id: 4
     rarity: 40
     overrideLevelAmbience: {fileID: 11400000, guid: 210e7cb2ffb6c1643ba2c3384ab9a81c,
