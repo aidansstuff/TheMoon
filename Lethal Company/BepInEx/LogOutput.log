@@ -26,7 +26,7 @@
 11. 68 Artifice (Vanilla)
 12. 44 Liquidation (Vanilla)
 13. 5 Embrion (Vanilla)
-14. Moon (Custom)
+14. 0 Moon (Custom)
 
 [Info   :LethalLevelLoader] LethalLevelLoader Loaded The Following ExtendedDungeonFlows:
 1. Facility (Level1Flow) (Vanilla)
@@ -42,9 +42,11 @@
 [Info   : LethalLib] Found 0 prefabs to fix
 [Info   :LethalLevelLoader] Saving Current SelectableLevel: 41 Experimentation
 [Warning:LethalLevelLoader] Disabling LethalLib Dungeon.RoundManager_Start() Function To Prevent Conflicts
-[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: MoonsCatalogue, LoadNode Is: moonRouteConfirm
-[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: MoonsCatalogue, LoadNode Is: moonRouteConfirm
-[Info   :LethalLevelLoader] Saving Current SelectableLevel: Moon
+[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: Start, LoadNode Is: moonRouteConfirm
+[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: Start, LoadNode Is: moonRouteConfirm
+[Info   :LethalLevelLoader] Saving Current SelectableLevel: 0 Moon
+[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: ParserError2, LoadNode Is: moonRouteConfirm
+[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: ParserError2, LoadNode Is: moonRouteConfirm
 [Info   :LethalLevelLoader] Getting Random DungeonFlows!
 [Info   :LethalLevelLoader] ExtendedLevel <-> ExtendedDungeonFlow Dynamic Matching Report.
 
@@ -62,5 +64,4 @@ Alternate Entrance: EntranceTeleportB (Entrance ID: 1)
 Found Fire Escape GlobalProp: (ID: 1231), Modifying Spawn rate Count From (1,1) To (1,1)
 
 
-[Info   :LethalLevelLoader] Created New Day History Log! PlanetName: Moon ,Facility ,Quota: 0 , Day: 1 , Weather: Foggy
-[Warning:  HarmonyX] UnpatchAll has been called - This will remove ALL HARMONY PATCHES.
+[Info   :LethalLevelLoader] Created New Day History Log! PlanetName: Moon ,Haunted Mansion ,Quota: 0 , Day: 1 , Weather: Foggy
