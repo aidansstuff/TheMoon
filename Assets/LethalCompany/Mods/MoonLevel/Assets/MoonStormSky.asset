@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: MoonStormSky
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 11400000, guid: e0f730eae423a8142beb7351bbdcc16a, type: 2}
+  - {fileID: 11400000, guid: 9c3ef8fdb3d71f24483528fdea899dd3, type: 2}
+  - {fileID: 11400000, guid: 59d65a86e43de0645af71e3cec3bd7f6, type: 2}
+  - {fileID: 11400000, guid: abab43f5287cb5b418734d125803dc5b, type: 2}
+  - {fileID: 11400000, guid: 4f8bac1635be717458d07486ef3c00fe, type: 2}
+  - {fileID: 11400000, guid: 5de626d2e7b21134d96cc4325b792c59, type: 2}

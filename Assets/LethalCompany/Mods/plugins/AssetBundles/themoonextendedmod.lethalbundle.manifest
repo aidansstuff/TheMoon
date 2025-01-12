@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3841782871
+CRC: 1063918561
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: deeb5ad87f3fa3e611a5be9ddca588a1
+    Hash: eb0b1d56d9faefd87485b411bba59c34
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2b98e1800d37112d39c4ed6e8910eddb
+    Hash: 12b36e86533f0d6d78e34cf86caa6715
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: deeb5ad87f3fa3e611a5be9ddca588a1
+    Hash: eb0b1d56d9faefd87485b411bba59c34
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,8 +30,6 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 54
   Script: {instanceID: 0}
-- Class: 64
-  Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
 - Class: 74
@@ -47,19 +45,11 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 70b342d8ce5c2fd48b8fa3147d48d1d1, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: e1fbb15bf92b84f40a1eb030765b5afe, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 65d3fcb39dd67306e9bb17a603308070, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 04f75356a7e9c978bddc7d568e58a50b, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 2866987eabc9ca450d4909d13cee1650, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 7071c6dd68c2de2b1e3d21eaf5b46591, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: c30496d6ae6d6f907456e10a94e01ec6, type: 3}
 - Class: 114
@@ -70,10 +60,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: acdff16ba41b91244cdfec19a6c574ce, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 074ced4ef9f666f2d2a39c612e83c440, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 0ff02921be40daf28b21895907c199cb, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3c36d0a92cbb1f26a39169ef0eae393a, type: 3}
 - Class: 114
@@ -93,26 +79,16 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 0bf1473be2fdebe220e46d27c67438ea, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 2cb83ec5af44a29ee2796d80fd4c3d7f, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 796b75e345bd64d47a31edd757bd2670, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 38fe8968c38c9288c008f2925ce27edf, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: f28dea0105b5dcfb9ed30ad357b56306, type: 3}
 - Class: 115
-  Script: {instanceID: 0}
-- Class: 117
-  Script: {instanceID: 0}
-- Class: 120
   Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
 - Class: 137
-  Script: {instanceID: 0}
-- Class: 145
   Script: {instanceID: 0}
 - Class: 195
   Script: {instanceID: 0}
@@ -165,8 +141,6 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.Animations.Rigging.RigLayer
 - AssemblyName: Unity.Animation.Rigging
   ClassName: UnityEngine.Animations.Rigging.TwoBoneIKConstraintData
-- AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
-  ClassName: UnityEngine.Rendering.HighDefinition.LocalVolumetricFogArtistParameters
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.ArgumentCache
 - AssemblyName: UnityEngine.CoreModule
