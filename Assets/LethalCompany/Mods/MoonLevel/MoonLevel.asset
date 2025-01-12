@@ -21,13 +21,13 @@ MonoBehaviour:
   PlanetName: 0 Moon
   LevelDescription: 'POPULATION: Abandoned
 
-    CONDITIONS: Rough, rocky terrain.
+    CONDITIONS: Rough, rocky terrain,
+    consitantly orbiting its planet Earth.
 
-    FAUNA:
-    Mostly empty due to severe cold temperatures.'
+    FAUNA: Near empty.'
   videoReel: {fileID: 0}
   riskLevel: C
-  timeToArrive: 8
+  timeToArrive: 3
   OffsetFromGlobalTime: 0
   DaySpeedMultiplier: 1
   planetHasTime: 1
@@ -39,20 +39,18 @@ MonoBehaviour:
     weatherVariable: 6
     weatherVariable2: 17
   overrideWeather: 0
-  overrideWeatherType: 3
+  overrideWeatherType: -1
   currentWeather: -1
-  factorySizeMultiplier: 0
+  factorySizeMultiplier: 0.4
   dungeonFlowTypes:
   - id: 0
-    rarity: 300
-    overrideLevelAmbience: {fileID: 11400000, guid: 81b0be3a6b6643345b97217983e29c49,
-      type: 2}
+    rarity: 200
+    overrideLevelAmbience: {fileID: 0}
   - id: 1
-    rarity: 3
-    overrideLevelAmbience: {fileID: 11400000, guid: a29bc365f67b04e44b7a26d1d3920fa5,
-      type: 2}
-  - id: 4
     rarity: 40
+    overrideLevelAmbience: {fileID: 0}
+  - id: 4
+    rarity: 60
     overrideLevelAmbience: {fileID: 11400000, guid: 210e7cb2ffb6c1643ba2c3384ab9a81c,
       type: 2}
   spawnableMapObjects:
@@ -396,7 +394,7 @@ MonoBehaviour:
   minTotalScrapValue: 500
   maxTotalScrapValue: 900
   levelAmbienceClips: {fileID: 11400000, guid: 81b0be3a6b6643345b97217983e29c49, type: 2}
-  maxEnemyPowerCount: 5
+  maxEnemyPowerCount: 7
   maxOutsideEnemyPowerCount: 12
   maxDaytimeEnemyPowerCount: 0
   Enemies:
