@@ -1,3 +1,8 @@
+[Info   :FastStartup] Loading Configuration
+[Info   :FastStartup] Plugin dev.flero.lethal.FastStartup is loaded!
+[Info   :FastStartup] Loading patches...
+[Info   :DevelopmentStartup] Plugin DevelopmentStartup is loaded! Version: 1.2.0 (Release)
+[Info   :FastStartup.Savers.Splash] Trying to stop splash screen. Cancelling after 15 seconds.
 [Info   : LethalLib] LethalLib loaded!!
 [Info   :MaxWasUnavailable.LethalModDataLib] Plugin MaxWasUnavailable.LethalModDataLib is loaded!
 [Info   :LethalLevelLoader] LethalLevelLoader loaded!!
@@ -5,13 +10,22 @@
 [Info   :LethalLevelLoader] evaisa.lethallibfound, enabling compatability patches.
 [Info   :LethalLevelLoader] Finding LethalBundles!
 [Info   :LethalLevelLoader] Config Level Set As: User
+[Message:FromTheMoon] Hello world
+[Info   :FromTheMoon] Patched? Hopefully
 [Info   :LethalLevelLoader] Found ExtendedMod: ExtendedMod
 [Info   :LethalLevelLoader] Adding ScenePath: TheMoonScene
+[Message:DevelopmentStartup] Loading settings from prefs before the game loads default settings
+[Info   :FastStartup.Savers.LaunchOptions] Skipping launch options, defaulting to Lan.
+[Message:DevelopmentStartup] To change the launch mode (Online | Lan), edit the config file for the "FastStartup" plugin
+[Info   :FastStartup.Savers.BootAnim] Skipping boot animation
 [Info   :LethalLevelLoader] Registering Bundle Content!
 [Info   :LethalLevelLoader] Skipped Registering 0 NetworkObjects As They Were Already Registered.
 [Info   :MaxWasUnavailable.LethalModDataLib] Registering ModDataAttribute fields...
 [Info   :MaxWasUnavailable.LethalModDataLib] Hooking up save, load and delete events...
 [Info   :MaxWasUnavailable.LethalModDataLib] ModDataHandler initialised!
+[Message:DevelopmentStartup] To change the launch mode (Online | Lan), edit the config file for the "FastStartup" plugin
+[Info   :FastStartup.Savers.MenuAnim] Disabling menu open animation
+[Info   :FastStartup.Savers.LanPopup] Destroying LAN popup
 [Info   :LethalLevelLoader] LethalLevelLoader Loaded The Following ExtendedLevels:
 1. 41 Experimentation (Vanilla)
 2. 220 Assurance (Vanilla)
@@ -35,33 +49,36 @@
 4. Facility (Level1Flow3Exits) (Vanilla)
 5. Mineshaft (Level3Flow) (Vanilla)
 
-[Info   :LethalLevelLoader] Initialized LLL Save File, Current Level Was: CompanyBuildingLevel, Current Vanilla Save Is: LCSaveFile1
+[Info   :LethalLevelLoader] Initialized LLL Save File, Current Level Was: AssuranceLevel, Current Vanilla Save Is: LCSaveFile2
 [Info   :LethalLevelLoader] LethalLevelLoader Has Finished Initializing.
 [Info   : LethalLib] Adding 0 unlockables to unlockables list
 [Info   : LethalLib] Adding 0 items to terminal
 [Info   : LethalLib] Found 0 prefabs to fix
-[Info   :LethalLevelLoader] Loading Previously Saved SelectableLevel: 71 Gordion
-[Info   :LethalLevelLoader] Saving Current SelectableLevel: 71 Gordion
+[Info   :LethalLevelLoader] Loading Previously Saved SelectableLevel: 220 Assurance
+[Info   :LethalLevelLoader] Saving Current SelectableLevel: 220 Assurance
 [Warning:LethalLevelLoader] Disabling LethalLib Dungeon.RoundManager_Start() Function To Prevent Conflicts
-[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: Start, LoadNode Is: moonRouteConfirm
-[Info   :LethalLevelLoader] LockedNodeEventTest: ExtendedLevel Is: MoonExtendedLevel (LethalLevelLoader.ExtendedLevel), CurrentNode Is: Start, LoadNode Is: moonRouteConfirm
-[Info   :LethalLevelLoader] Saving Current SelectableLevel: 0 Moon
 [Info   :LethalLevelLoader] Getting Random DungeonFlows!
 [Info   :LethalLevelLoader] ExtendedLevel <-> ExtendedDungeonFlow Dynamic Matching Report.
 
-Info For ExtendedLevel: MoonExtendedLevel | Planet Name: Moon | Content Tags: Custom | Route Price: 0 | Current Weather: Foggy
+Info For ExtendedLevel: AssuranceExtendedLevel | Planet Name: Assurance | Content Tags: Free, Canyon, Vanilla | Route Price: 0 | Current Weather: Stormy
 Unviable ExtendedDungeonFlows: Facility, Facility
-Viable ExtendedDungeonFlows: Facility (200), Mineshaft (60), Haunted Mansion (40)
+Viable ExtendedDungeonFlows: Facility (300), Mineshaft (40), Haunted Mansion (3)
 
 [Info   :LethalLevelLoader] Setting Random DungeonFlows!
 [Warning:LethalLevelLoader] Disabling LethalLib Dungeon.RoundManager_GenerateNewFloor() Function To Prevent Conflicts
 [Info   :LethalLevelLoader] Fire Exit Patch Report, Details Below;
 
-EntranceTeleport's Found, Moon Contains 2 Entrances! ( 1 Fire Escapes) 
+EntranceTeleport's Found, Assurance Contains 2 Entrances! ( 1 Fire Escapes) 
 Main Entrance: EntranceTeleportA (Entrance ID: 0)
 Alternate Entrance: EntranceTeleportB (Entrance ID: 1)
 Found Fire Escape GlobalProp: (ID: 1231), Modifying Spawn rate Count From (1,1) To (1,1)
 
 
-[Info   :LethalLevelLoader] Created New Day History Log! PlanetName: Moon ,Mineshaft ,Quota: 1 , Day: 1 , Weather: Foggy
+[Info   :LethalLevelLoader] Created New Day History Log! PlanetName: Assurance ,Facility ,Quota: 1 , Day: 1 , Weather: Stormy
+[Info   :FromTheMoon] Started
+[Info   :FromTheMoon] Hit instruction
+[Info   :FromTheMoon] Started
+[Info   :FromTheMoon] Hit instruction
+[Info   :FromTheMoon] Started
+[Info   :FromTheMoon] Hit instruction
 [Warning:  HarmonyX] UnpatchAll has been called - This will remove ALL HARMONY PATCHES.

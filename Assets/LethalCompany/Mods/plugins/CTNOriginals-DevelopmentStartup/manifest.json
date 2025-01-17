@@ -1,0 +1,10 @@
+{
+    "name": "DevelopmentStartup",
+    "version_number": "1.2.0",
+    "website_url": "https://github.com/CTN-Originals/LethalCompany-DevelopmentStartup",
+    "description": "Skip all the useless startup menus and jump right into a game! Tool for developers.",
+    "dependencies": [
+		"BepInEx-BepInExPack-5.4.2100",
+		"flerouwu-LC_FastStartup-1.1.2"
+	]
+}

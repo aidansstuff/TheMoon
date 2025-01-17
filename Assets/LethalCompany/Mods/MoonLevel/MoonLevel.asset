@@ -365,30 +365,16 @@ MonoBehaviour:
     rarity: 7
   - spawnableItem: {fileID: 11400000, guid: 90ea4415a6c645248903cc8eaf8b05ef, type: 2}
     rarity: 53
-  - spawnableItem: {fileID: 11400000, guid: 2dd3f4c3570bb1842aa69cc7d80168f4, type: 2}
-    rarity: 25
   - spawnableItem: {fileID: 11400000, guid: d8bf12f938814824ba97e481f829d28f, type: 2}
     rarity: 15
-  - spawnableItem: {fileID: 11400000, guid: 79d14c0f7e4e27f4d9a5bb7d34affd9b, type: 2}
-    rarity: 35
-  - spawnableItem: {fileID: 11400000, guid: 53f92ea16487103489680e88e7e34b94, type: 2}
-    rarity: 50
   - spawnableItem: {fileID: 11400000, guid: 1358af931d824044aa85477d2a23fe85, type: 2}
     rarity: 30
   - spawnableItem: {fileID: 11400000, guid: 731b2ca7c88a18e43aac23e8df6c6f67, type: 2}
     rarity: 25
   - spawnableItem: {fileID: 11400000, guid: 11e831315853d0b449341d572133d9c4, type: 2}
     rarity: 30
-  - spawnableItem: {fileID: 11400000, guid: e45b80feffa2fbd4ab505f5e810f6cd3, type: 2}
-    rarity: 45
-  - spawnableItem: {fileID: 11400000, guid: fb59b3ca9ee48c54f8fd1670e1b37f69, type: 2}
-    rarity: 30
-  - spawnableItem: {fileID: 11400000, guid: 65dd2924065b8674e8be77201c476a0d, type: 2}
-    rarity: 40
   - spawnableItem: {fileID: 11400000, guid: c098cb7123f52644eaff58e9a3e69e60, type: 2}
     rarity: 10
-  - spawnableItem: {fileID: 11400000, guid: 83d59b5c52fe2fd409606122ccc922e3, type: 2}
-    rarity: 1
   minScrap: 10
   maxScrap: 14
   minTotalScrapValue: 500
@@ -402,21 +388,11 @@ MonoBehaviour:
     rarity: 17
   - enemyType: {fileID: 11400000, guid: 47bfbc7df03bc2447a0363a5ed71b969, type: 2}
     rarity: 43
-  - enemyType: {fileID: 11400000, guid: 933561c9252029049862db0c9816bce5, type: 2}
-    rarity: 25
-  - enemyType: {fileID: 11400000, guid: 12628a74119acba45b4227fdee2cd359, type: 2}
-    rarity: 20
   - enemyType: {fileID: 11400000, guid: b73eeaef37a4640498b3fe5f7fae8c76, type: 2}
     rarity: 40
-  - enemyType: {fileID: 11400000, guid: 2ec3121d4c168f443bd8f02160b4b7f9, type: 2}
-    rarity: 1
   OutsideEnemies:
   - enemyType: {fileID: 11400000, guid: 913ca89ff322d714baa20f2d7367f961, type: 2}
     rarity: 25
-  - enemyType: {fileID: 11400000, guid: 3940ced3bc547c148b1e82a679e61a74, type: 2}
-    rarity: 25
-  - enemyType: {fileID: 11400000, guid: ac9a0f94b001df74588bbf6c25f19a7d, type: 2}
-    rarity: 50
   DaytimeEnemies: []
   enemySpawnChanceThroughoutDay:
     serializedVersion: 2
